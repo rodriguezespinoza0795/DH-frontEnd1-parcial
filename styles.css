@@ -1,0 +1,439 @@
+:root {
+    --primary: #8B48BF;
+    --light--primary:  rgba(139, 72, 191, 0.3);
+    --secondary: #3CDDF3;
+    --gray: #B3B2B7;
+    --light--gray: #FAFAFA;
+    --dark--blue: #232C50;
+}
+
+/* Reiniciar los estilos que el navegador trae por defecto */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/*GLOBAL CLASSES*/
+.primary__button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 500ms;
+}
+
+.secondary__button {
+    background-color: var(--dark--blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: max-content;
+    transition: all 500ms;
+    justify-self: center;
+}
+
+.secondary__button:hover,
+.primary__button:hover {
+    opacity: .8;
+}
+
+/*GLOBAL CLASSES*/
+
+
+/* EMPIEZA HEADER*/
+.header {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header--mobile {
+    position: relative;
+}
+
+.header--mobile:hover .header__nav--mobile {
+    display: flex;
+}
+
+.header__nav--desktop {
+    display: none;
+}
+
+.header__nav--mobile {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    background-color: var(--primary);
+    opacity: .9;
+    border-radius: 15px;
+    flex-flow: column;
+    align-items: center;
+    padding-bottom: 40px;
+    gap: 15px;
+    animation: opacity 1s;
+} 
+
+.header__nav--mobile ul {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    padding: 40px 40px 0px 40px;
+}
+
+.header__nav--mobile a {
+    color: white;
+    text-decoration: none
+}
+
+.header__nav--mobile a:hover {
+    text-decoration: underline;
+}
+
+
+.header__nav--desktop ul {
+    display: flex;
+    gap: 10px;
+}
+
+.header__nav--desktop ul a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+.header__nav--desktop ul a:hover {
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: white;
+    opacity: .9;
+}
+
+.header__button {
+    display: none;
+}
+
+@media ( min-width: 900px) {
+    .header {
+        justify-content: space-evenly;
+    }
+
+    .header--mobile {
+        display: none;
+    }
+
+    .header__nav--desktop {
+        display: block;
+    }
+    
+    .header__button {
+        display: block;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 0.9;
+    }
+  }
+
+/*TERMINA HEADER*/
+
+/*EMPIEZA MAIN*/
+/*EMPIEZA HERO*/
+
+.hero {
+    display: flex;
+    gap: 15px;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+.hero img {
+    max-width: 320px;
+    width: 100%;
+}
+
+.hero__description {
+    min-width: 320px;
+    display: flex;
+    text-align: end;
+    gap: 15px;
+    flex-direction: column;
+    align-items: end;
+}
+
+.hero__description h1 {
+    font-size: 2.5rem;
+}
+/*TERMINA HERO*/
+/*EMPIEZA VENTAJAS*/
+.advantages {
+    display: grid;
+    justify-content: center;
+    padding: 40px;
+    background-color: var(--secondary);
+    color: white;
+    gap: 40px;
+}
+
+.advantages h2 { 
+    font-size: 2.5rem;
+}
+
+@media (min-width: 480px){
+    .advantages {
+        grid-template-columns:  1fr 1fr;
+        background-color: var(--primary);
+    }
+}
+
+@media (min-width: 900px){
+    .advantages {
+        grid-template-columns: 35% 35%;
+    }
+}
+
+/*TERMINA VENTAJAS*/
+
+/*FEATURES EMPIEZA*/
+.features {
+    display: flex;
+    padding: 40px 0px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.features p {
+    color: var(--gray);
+    padding: 40px;
+}
+
+.features div {
+    display: flex;
+    margin-left: 40px;
+    font-weight: bold;
+    background-color: var(--light--primary);
+    border-radius: 20px 0px 0px 20px;
+}
+
+.features h4 {
+    padding: 10px;
+    width: 100%;
+}
+
+.features span {
+    background-color: var(--primary);
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+}
+
+.features article {
+    max-width: 480px;
+}
+
+@media (min-width: 480px){
+    .features {
+        padding: 40px;
+    }
+
+    .features div {
+        display: flex;
+        gap: 10px;
+        background-color: transparent;
+        margin-left: 0px;
+    }
+
+    .features p {
+        padding: 20px 30px 20px 70px;
+    }
+}
+/*FEATURES TERMINA*/
+/*BEST PLAYERS EMPIEZA*/
+.best-players {
+    text-align: center;
+    padding: 10px;
+}
+
+.best-players h3 {
+    font-size: 2.5rem;
+    padding-bottom: 40px;
+}
+
+.best-players__slider {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    padding: 50px 0px;
+    gap: 25px;
+}
+
+.best-players__slider article {
+    background-color: var(--light--gray);
+    min-width: 350px;
+    scroll-snap-align: center;
+}
+
+.best-players__slider article p {
+    padding: 15px;
+    color: var(--gray);
+}
+
+.best-players__slider article img {
+    position: relative;
+    top: -30px;
+}
+
+@media (min-width: 480px){
+    .best-players__slider article {
+        width: 350px;
+        padding: 0px 15px;
+    }
+
+    .best-players__slider {
+        flex-flow: wrap;
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+}
+/*BEST PLAYERS TERMINA*/
+/*BEST TEAM TERMINA*/
+.best-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--secondary);
+    color: white;
+    gap: 40px;
+}
+
+.best-team h2 { 
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 480px){
+    .best-team {
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        background-color: var(--primary);
+        justify-content: space-evenly;
+    }
+
+    .best-team h2 { 
+        text-align: start;
+    }
+
+    .secondary__button {
+        background-color: white;
+        color: var(--primary);
+    }
+}
+
+@media (min-width: 900px){
+    .best-team {
+        grid-template-columns: 40% 40%;
+    }
+}
+/*BEST TEAM TERMINA*/
+/*TERMINA MAIN*/
+/*EMPIEZA FOOTER*/
+footer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: black;
+    padding: 40px;
+    grid-template-areas: "form"
+                         "list"
+                         "social-network"
+                         "logo"
+                         "rights";
+}
+
+footer form {
+    grid-area: form;
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+
+.form--input {
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    text-indent: 15px;
+}
+
+footer ul {
+    grid-area: list;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social-networks {
+    grid-area: social-network;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+footer > img {
+    grid-area: logo;
+    padding: 15px;
+    height: 60px;
+}
+
+footer p {
+    grid-area: rights;
+    padding: 15px;
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+@media (min-width: 480px) {
+    footer {
+        grid-template-areas: "logo form"
+                             "list list"
+                             "social-network rights";
+    }
+}
+
+@media (min-width: 900px) {
+    footer {
+        grid-template-areas: "logo list form"
+                             "social-network list rights";
+    }
+}
+/*TERMINA FOOTER*/
