@@ -1,0 +1,76 @@
+/* EMPIEZA HEADER*/
+.header__nav--mobile {
+    background-color: var(--primary);
+}
+/*TERMINA HEADER*/
+
+/*EMPIEZA VENTAJAS*/
+.advantages {
+    grid-template-columns:  1fr 1fr;
+    background-color: var(--primary);
+}
+/*TERMINA VENTAJAS*/
+
+/*FEATURES EMPIEZA*/
+.features {
+    padding: 40px;
+}
+
+.features div {
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+    margin-left: 0px;
+}
+
+.features p {
+    padding: 20px 30px 20px 70px;
+}
+/*FEATURES TERMINA*/
+
+/*BEST PLAYERS EMPIEZA*/
+.best-players__slider article {
+    width: 350px;
+    padding: 0px 15px;
+}
+
+.best-players__slider {
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+/*BEST PLAYERS TERMINA*/
+
+/*BEST TEAM EMPIEZA*/
+.best-team {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    background-color: var(--primary);
+    justify-content: space-evenly;
+}
+
+.best-team h2 { 
+    text-align: start;
+}
+
+.secondary__button {
+    background-color: white;
+    color: var(--primary);
+}
+
+/*BEST TEAM TERMINA*/
+
+
+/*FOOTER EMPIEZA*/
+footer {
+    grid-template-areas: "logo form"
+                         "list list"
+                         "social-network rights";
+}
+
+.form--input {
+    max-width: 200px;
+}
+
+/*FOOTER TERMINA*/

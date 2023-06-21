@@ -1,0 +1,43 @@
+/* EMPIEZA HEADER*/
+.header {
+    justify-content: space-evenly;
+}
+
+.header--mobile {
+    display: none;
+}
+
+.header__nav--desktop {
+    display: block;
+}
+
+.header__button {
+    display: block;
+}
+/*TERMINA HEADER*/
+
+/*EMPIEZA VENTAJAS*/
+.advantages {
+    grid-template-columns: 35% 35%;
+}
+
+/*TERMINA VENTAJAS*/
+
+/*BEST TEAM EMPIEZA*/
+.best-team {
+    grid-template-columns: 40% 40%;
+}
+
+/*BEST TEAM TERMINA*/
+
+/*FOOTER EMPIEZA*/
+footer {
+    grid-template-areas: "logo list form"
+                         "social-network list rights";
+}
+
+.social-networks {
+    justify-content: center;
+}
+
+/*FOOTER TERMINA*/

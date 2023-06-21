@@ -1,0 +1,47 @@
+:root {
+    --primary: #8B48BF;
+    --light--primary:  rgba(139, 72, 191, 0.3);
+    --secondary: #3CDDF3;
+    --gray: #B3B2B7;
+    --light--gray: #FAFAFA;
+    --dark--blue: #232C50;
+}
+
+/* Reiniciar los estilos que el navegador trae por defecto */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/*GLOBAL CLASSES*/
+.primary__button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: all 500ms;
+}
+
+.secondary__button {
+    background-color: var(--dark--blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: max-content;
+    transition: all 500ms;
+    justify-self: center;
+}
+
+.secondary__button:hover,
+.primary__button:hover {
+    opacity: .8;
+}
+/*GLOBAL CLASSES*/
